@@ -549,6 +549,7 @@ class MainActivity : AppCompatActivity() {
 ```
 ![[Pasted image 20241104130254.png]] Image Format
 
+
 Data in FireBase
 ![[Pasted image 20241104130736.png]]
 
@@ -600,6 +601,52 @@ Step 2 -
 Step 1 custom xml crete kiya jaha alert box khud se bnaya
 baki steps image me hai
 ![[Pasted image 20241105192338.png]]
+# List View
+### Adapter -
+it is use to pass the list data to list view
+![[Pasted image 20241107152300.png]]
+
+
+Abhi default listview pdh hm apna listview bhi bna skte hai but lets see first deafult provided by android studio
+
+![[Pasted image 20241107145917.png]]
+Ab agar hm chahte hai ki kisi bhi task pe click kre kuch ho to aise krenge
+
+![[Pasted image 20241107151013.png]]
+complete code
+![[Pasted image 20241107151028.png]]
+# Custom List view
+steps
+1. Custom listview ka ui bnayenge ek nayi activity bna ke
+![[Pasted image 20241108003442.png]] as here creted list_item
+2. We will pass the coustom list in our main activity list view 
+![[Pasted image 20241108003715.png]]like this
+3. data class bnayenge jo bhi values chahiye hmko unko as a parameter pass krenenge
+![[Pasted image 20241108003940.png]]
+4. costom adapter hai to custom to banana pdega na to ek adapter class bnayenge jo default adapter jo ki hai "ArrayAdapter" usko inherit krega taki hm arrayadapter ke features ka use kr ske
+5. ![[Pasted image 20241108005115.png]]
+
+7. fir us adapter ki class  as a paramter context and arraylist of types user denge user wahi hai hmne jo data class bnayi thu
+8. ![[Pasted image 20241108005125.png]]
+9. yad kro hmne array adapter ko inherit kiya tha usika function override krenge jo ki get view function h0ga
+![[Pasted image 20241108005609.png]]
+10. fir hm layout inflater ka use kr ke layout ko inflate kr denge
+ ![[Pasted image 20241108005655.png]]
+ is se hoga ye ki hm coustom_list naam ki jo activity hai uske views ko use kr payenge like find id kr payenge mtlb get kr payenge uske elements ko click listeners lga payenge aaisa krenge jaise mainActivity me uske activity ka context dete na waise 
+ ![[Pasted image 20241108005856.png]]
+ Main activity me bhi diya hai na waise hi kuch smjh lo
+ ### Layout inflater
+ ![[Pasted image 20241108005937.png]]
+ 11. Jb inflate kr diya to sare items ko get bhi kr lenge
+ 12. ![[Pasted image 20241108010033.png]]
+ 13. jb get kr liya to set bhi kri denge
+![[Pasted image 20241108010208.png]]
+yaha to hmne arraylist me data rkha tha to array list se set kr diya ap jha rkhe hoge waha se kr lena
+14. we will return the view
+![[Pasted image 20241108010632.png]]
+15. then just jake main activity me apne list view me apne adapter ko dal denge
+ ![[Pasted image 20241108010725.png]]
+
 
 
 
